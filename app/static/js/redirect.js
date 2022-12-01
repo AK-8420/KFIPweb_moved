@@ -4,8 +4,7 @@ function timer(){
     $("#count").text(wait.toString());
     if(wait == 0){
         console.log("redirect");
-        console.log($('a').attr('href'));
-        //location.href = "https://www.kfip-games.link/";
+        location.href = $('a').attr('href');
     }else{
         wait -= 1;
     }
