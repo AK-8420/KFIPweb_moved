@@ -15,7 +15,7 @@
         </div>
         <a href="https://www.kfip-games.link/" class="py-3 fs-4" style="mix-blend-mode: multiply;">https://www.kfip-games.link/</a>
         <p id="notification">
-            <span id="count">10</span>秒後にリンク先のページへ移動します。
+            <span id="count">5</span>秒後にリンク先のページへ移動します。
         </p>
     </div>
     <p class="text-muted text-end" id="caption">このイラストはAIによって描かれました。</p>
@@ -23,4 +23,5 @@
 {% endblock %}
 
 {% block extrajs %}
+<script src="{% static 'js/redirect.js' %}" type="text/javascript"></script>
 {% endblock %}
