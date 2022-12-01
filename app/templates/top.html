@@ -1,20 +1,26 @@
 {% extends '_base.html' %}
 {% load static %}
 
-{% block extra_css %}
+{% block extracss %}
 <link type="text/css" rel="stylesheet" href="{% static 'css/top.css' %}">
 {% endblock %}
 
 {% block content %}
-<div class="d-flex align-items-center flex-column justify-content-center" style="height: 16rem;">
-    <h1>移転しました</h1>
-    <p>
-        KFIPのホームページは下記の場所に移転しました。<br/>
-        ブックマークなどの変更をお願いします。
-    </p>
-    <a href="https://www.kfip-games.link/">https://www.kfip-games.link/</a>
+<div class="row h-100 mx-auto" style="background-image:url({% static 'background.png' %});" id="back">
+    <div class="d-flex align-items-center flex-column justify-content-center my-auto py-4" id="information">
+        <h1 class="py-1">KFIPのホームページは移転しました</h1>
+        <div class="text-center">
+            URLが下記のものに変更されました。<br/>
+            ブックマークなどの変更をお願いします。
+        </div>
+        <a href="https://www.kfip-games.link/" class="py-3 fs-4">https://www.kfip-games.link/</a>
+        <p id="notification">
+            <span id="count">10</span>秒後にリンク先のページへ移動します。
+        </p>
+    </div>
+    <p class="text-muted text-end" id="caption">このイラストはAIによって描かれました。</p>
 </div>
-<div class="container py-4">
-    テストテストテストテストテストテストテストテストテストテスト
-</div>
+{% endblock %}
+
+{% block extrajs %}
 {% endblock %}
