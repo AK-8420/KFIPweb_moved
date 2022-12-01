@@ -11,9 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+2&display=swap" rel="stylesheet">
   {% bootstrap_css %}
   <link type="text/css" rel="stylesheet" href="{% static 'css/_base.css' %}">
-  <link type="text/css" rel="stylesheet" href="{% static 'css/top.css' %}">
+  {% block extra_css %}
+  {% endblock %}
 
-  {% bootstrap_js %}
+  {% bootstrap_javascript %}
   <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
 
   {% block title %}
@@ -35,17 +36,10 @@
 
 <body>
   <main>
-    <div class="container">
-      {% block main %}
-      <p>コンテンツがありません</p>
-      {% endblock %}
-    </div>
+    {% block content %}
+    <p>コンテンツがありません</p>
+    {% endblock %}
   </main>
-
-  <footer class="bg-dark text-light" style="text-align: center; padding:1rem 0 2rem 0;">
-    <p>Copyright 2021-{% now 'Y' %} KFIP</p>
-  </footer>
-
   {% block extrajs %}
   {% endblock %}
 </body>

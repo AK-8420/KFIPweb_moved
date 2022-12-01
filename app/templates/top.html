@@ -1,12 +1,18 @@
 {% extends '_base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link type="text/css" rel="stylesheet" href="{% static 'css/top.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="d-flex align-items-center flex-column justify-content-center" style="height: 16rem;">
     <h1>移転しました</h1>
     <p>
-        テスト
+        KFIPのホームページは下記の場所に移転しました。<br/>
+        ブックマークなどの変更をお願いします。
     </p>
+    <a href="https://www.kfip-games.link/">https://www.kfip-games.link/</a>
 </div>
 <div class="container py-4">
     テストテストテストテストテストテストテストテストテストテスト

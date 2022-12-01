@@ -1,35 +1,8 @@
-$img-w: 4776px;
-$img-h: 1080px;
-$shrink: $img-h/100vh;
-$ratio: 1 / $shrink;
-$speed: 50s;
-
+/*--------------------------------------
+  Fancy Link
+--------------------------------------*/
 $bal-back: #ffffff;
 $bal-shadow: rgba(116,224,239,0.8); // #74e0ef
-
-.slider {
-  position: absolute;
-  overflow: hidden;
-  width: 100vw;
-  .image{
-    width: $img-w * $ratio;
-    height: $img-h * $ratio;
-    background-size: $img-w * $ratio $img-h * $ratio;
-    animation: slide $speed linear infinite;
-  }
-}
-
-@keyframes slide {
-  from { background-position-x: 0; }
-  to   { background-position-x: -$img-w * $ratio; }
-}
-
-.toptitle {
-  color: #f7f7f7;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
 
 .fancy-link {
   margin-bottom: 2rem;
@@ -316,39 +289,4 @@ $bal-shadow: rgba(116,224,239,0.8); // #74e0ef
   );
 
   background-color: #eb7132;
-}
-
-/* 吹き出し本体 */
-.balloon{
-  position: relative;
-  padding: 0 20px 10px 20px;
-  background-color: $bal-back;
-  border-radius: 10px;
-  box-shadow: 6px 6px 0px 0px $bal-shadow;         /* 吹き出し本体の影 */
-}
-/* 三角アイコン */
-.balloon::before{
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: 27px;
-  bottom: -18px;
-  border-top: 15px solid $bal-shadow;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-}
-/* 三角アイコンの影 */
-.balloon::after{
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: 20px;
-  bottom: -15px;
-  border-top: 15px solid $bal-back;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
 }
