@@ -4,7 +4,7 @@ function timer(){
     $("#count").text(wait.toString());
     if(wait == 0){
         console.log("redirect");
-        location.href = $('a').attr('href');
+        location.href = $('#link').attr('href');
     }else{
         wait -= 1;
     }
